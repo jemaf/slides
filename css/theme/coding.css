@@ -293,7 +293,8 @@ section.title {
     font-weight: 200;
     color: #fff; }
   section.title.animated {
-    opacity: 0 !important; }
+    opacity: 0 !important;
+    width: 150% !important; }
     section.title.animated.present {
       animation: slidein cubic-bezier(1, -0.53, 0.405, 1.425);
       animation-duration: 3s;

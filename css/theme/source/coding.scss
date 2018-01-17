@@ -94,6 +94,7 @@ section.title {
 
     &.animated {
         opacity: 0 !important;
+        width: 150% !important;
         &.present {
             animation: slidein cubic-bezier(1.000, -0.530, 0.405, 1.425);
             animation-duration: 3s;
