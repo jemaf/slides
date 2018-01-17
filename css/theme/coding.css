@@ -263,6 +263,9 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
+/***********************************************
+ * Title slide
+ ***********************************************/
 @keyframes slidein {
   0% {
     transform: translateX(100%);
@@ -279,7 +282,6 @@ section.title {
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 7% !important;
-  opacity: 0 !important;
   width: 150% !important; }
   section.title h1 {
     font-weight: 300;
@@ -287,9 +289,42 @@ section.title {
   section.title h2, section.title h3, section.title address {
     font-weight: 200;
     color: #fff; }
-  section.title.present {
-    animation: slidein cubic-bezier(1, -0.53, 0.405, 1.425);
-    animation-duration: 2.0s;
-    animation-fill-mode: forwards; }
+  section.title.animated {
+    opacity: 0 !important; }
+    section.title.animated.present {
+      animation: slidein cubic-bezier(1, -0.53, 0.405, 1.425);
+      animation-duration: 2.0s;
+      animation-fill-mode: forwards; }
+
+/***********************************************
+ * Headers & Footers
+ ***********************************************/
+div.reveal > footer {
+  position: absolute;
+  font-size: 0.35em;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  bottom: 1em; }
+  div.reveal > footer.center {
+    left: 50%;
+    transform: translate(-50%, 0); }
+  div.reveal > footer.left {
+    left: 1em; }
+  div.reveal > footer.right {
+    right: 1em; }
+
+div.reveal > header {
+  position: absolute;
+  font-size: 0.35em;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  top: 1em; }
+  div.reveal > header.center {
+    left: 50%;
+    transform: translate(-50%, 0); }
+  div.reveal > header.left {
+    left: 1em; }
+  div.reveal > header.right {
+    right: 1em; }
 
 /*# sourceMappingURL=coding.css.map */

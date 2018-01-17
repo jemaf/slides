@@ -47,6 +47,11 @@ section.has-dark-background {
 @import "../template/theme";
 // ---------------------------------------------
 
+
+/***********************************************
+ * Title slide
+ ***********************************************/
+
 @keyframes slidein {
     0% {
         transform: translateX(100%);
@@ -70,9 +75,6 @@ section.title {
     background-color:  rgba(0, 0, 0, 0.6);
     color: $backgroundColor;
     padding: 7% !important;
-    opacity: 0 !important;
-    // margin-left: 7%;
-    // max-width: 50%;
     width: 150% !important;
 
     h1 {
@@ -85,11 +87,60 @@ section.title {
         color: $backgroundColor;
     }
 
-    &.present {
-        animation: slidein cubic-bezier(1.000, -0.530, 0.405, 1.425);
-        // animation-delay: 0.0s;
-        animation-duration: 2.0s;
-        animation-fill-mode: forwards;
-
+    &.animated {
+        opacity: 0 !important;
+        &.present {
+            animation: slidein cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            animation-duration: 2.0s;
+            animation-fill-mode: forwards;
+        }
     }
 }
+
+
+/***********************************************
+ * Headers & Footers
+ ***********************************************/
+
+ div.reveal > footer {
+    position: absolute;
+    font-size: 0.35em;
+    font-weight: 300;
+    font-family: $headingFont;
+    bottom: 1em;
+
+    &.center {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.left {
+        left: 1em;
+    }
+
+    &.right {
+        right: 1em;
+    }
+ }
+
+
+ div.reveal > header {
+    position: absolute;
+    font-size: 0.35em;
+    font-weight: 300;
+    font-family: $headingFont;
+    top: 1em;
+
+    &.center {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.left {
+        left: 1em;
+    }
+
+    &.right {
+        right: 1em;
+    }
+ }
