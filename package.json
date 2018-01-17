@@ -1,0 +1,24 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "My slide template based on reveal.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jemaf/slides.git"
+  },
+  "author": "João Eduardo Montandon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jemaf/slides/issues"
+  },
+  "homepage": "https://github.com/jemaf/slides#readme",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  }
+}
