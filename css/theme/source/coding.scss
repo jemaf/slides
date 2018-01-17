@@ -56,15 +56,21 @@ section.has-dark-background {
     0% {
         transform: translateX(100%);
         opacity: 0;
+        width: 150%;
     }
 
-    80% {
+    60% {
         transform: translateX(-15%);
         opacity: 1;
     }
 
-    100% {
+    75% {
         transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        width: inherit;
         opacity: 1;
     }
 }
@@ -75,7 +81,6 @@ section.title {
     background-color:  rgba(0, 0, 0, 0.6);
     color: $backgroundColor;
     padding: 7% !important;
-    width: 150% !important;
 
     h1 {
         font-weight: 300;
@@ -91,7 +96,7 @@ section.title {
         opacity: 0 !important;
         &.present {
             animation: slidein cubic-bezier(1.000, -0.530, 0.405, 1.425);
-            animation-duration: 2.0s;
+            animation-duration: 3s;
             animation-fill-mode: forwards;
         }
     }

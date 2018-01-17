@@ -269,20 +269,23 @@ body {
 @keyframes slidein {
   0% {
     transform: translateX(100%);
-    opacity: 0; }
-  80% {
+    opacity: 0;
+    width: 150%; }
+  60% {
     transform: translateX(-15%);
     opacity: 1; }
-  100% {
+  75% {
     transform: translateX(0);
+    opacity: 1; }
+  100% {
+    width: inherit;
     opacity: 1; } }
 section.title {
   font-family: "Raleway", sans-serif;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 7% !important;
-  width: 150% !important; }
+  padding: 7% !important; }
   section.title h1 {
     font-weight: 300;
     color: #fff; }
@@ -293,7 +296,7 @@ section.title {
     opacity: 0 !important; }
     section.title.animated.present {
       animation: slidein cubic-bezier(1, -0.53, 0.405, 1.425);
-      animation-duration: 2.0s;
+      animation-duration: 3s;
       animation-fill-mode: forwards; }
 
 /***********************************************
