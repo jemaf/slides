@@ -60,3 +60,6 @@ typings/
 #sass/scss
 *.scssc
 *css.map
+
+# distribution folder
+dist/

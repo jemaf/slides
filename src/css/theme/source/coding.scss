@@ -1,0 +1,151 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:200,300,400');
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: 'Open Sans', sans-serif;
+$headingFont: 'Raleway', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+/***********************************************
+ * Title slide
+ ***********************************************/
+
+@keyframes slidein {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+        width: 150%;
+    }
+
+    60% {
+        transform: translateX(-15%);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        width: inherit;
+        opacity: 1;
+    }
+}
+
+section.title {
+    font-family: $headingFont;
+    text-align: left;
+    background-color:  rgba(0, 0, 0, 0.6);
+    color: $backgroundColor;
+    padding: 7% !important;
+
+    h1 {
+        font-weight: 300;
+        color: $backgroundColor;
+    }
+
+    h2, h3, address {
+        font-weight: 200;
+        color: $backgroundColor;
+    }
+
+    &.animated {
+        opacity: 0 !important;
+        &.present {
+            animation: slidein cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+
+/***********************************************
+ * Headers & Footers
+ ***********************************************/
+
+ div.reveal > footer {
+    position: absolute;
+    font-size: 0.35em;
+    font-weight: 300;
+    font-family: $headingFont;
+    bottom: 1em;
+
+    &.center {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.left {
+        left: 1em;
+    }
+
+    &.right {
+        right: 1em;
+    }
+ }
+
+
+ div.reveal > header {
+    position: absolute;
+    font-size: 0.35em;
+    font-weight: 300;
+    font-family: $headingFont;
+    top: 1em;
+
+    &.center {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.left {
+        left: 1em;
+    }
+
+    &.right {
+        right: 1em;
+    }
+ }
