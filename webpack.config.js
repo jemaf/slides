@@ -46,7 +46,8 @@ module.exports = {
             { from: '../node_modules/reveal.js/plugin', to: 'plugin/' },
             { from: '../node_modules/reveal_external/external', to: 'plugin/external' }, 
             { from: '../node_modules/reveal.js/lib/js/head.min.js', to: 'lib/' }, 
-            { from: '../node_modules/reveal.js/js/reveal.js', to: 'lib/' }
+            { from: '../node_modules/reveal.js/js/reveal.js', to: 'lib/' },
+            { from: '../node_modules/d3/build/d3.js', to: 'lib/' },
         ])
     ],
     devServer: {

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jemaf/slides#readme",
   "dependencies": {
+    "d3": "^4.12.2",
     "headjs": "^1.0.3",
     "highlight.js": "^9.12.0",
     "reveal.js": "^3.6.0",

@@ -9,6 +9,7 @@ Reveal.initialize({
 
     transition: 'none',
     progress: true,
+    history: true,
 
     dependencies: [
         { src: PATH + '/markdown/marked.js' },
