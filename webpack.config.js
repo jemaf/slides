@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const OUTPUT_PATH = 'dist';
+
 module.exports = {
     context: path.join(__dirname, 'src'),
     entry: {
@@ -11,7 +13,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.[hash].js'
     },
     externals: {
         'reveal': 'Reveal'
@@ -36,17 +38,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html'
+            template: path.join(__dirname, 'src', 'index.html')
         }),
         new CopyWebpackPlugin([ 
-            { from: 'slides/*' }, 
-            { from: 'img/*' },
+            { from: 'slides/**/*' }, 
+            { from: 'img/**/*' },
             { from: '../node_modules/reveal.js/plugin', to: 'plugin/' },
             { from: '../node_modules/reveal_external/external', to: 'plugin/external' }, 
             { from: '../node_modules/reveal.js/lib/js/head.min.js', to: 'lib/' }, 
             { from: '../node_modules/reveal.js/js/reveal.js', to: 'lib/' }
-        ]),
-        new webpack.HotModuleReplacementPlugin()
+        ])
     ],
     devServer: {
         port: 8080
