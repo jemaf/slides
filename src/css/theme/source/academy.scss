@@ -207,4 +207,58 @@ h1.shout {
   }
   
 
-  
+  /***********************************************
+ * coding
+ ***********************************************/
+ pre {
+    &[data-file]::before {
+        content: attr(data-file);
+        position: absolute;
+        bottom: 0em;
+        right: 0em;
+        font-size: 1.5em;
+        font-family: $headingFont;
+        color: $linkColorHover;
+        padding: 0.3em;
+    }
+ }
+
+ code mark {
+    background-color: #fff2a8;
+
+    &.blue {
+        background-color: #a8d1ff;
+    }
+
+    &.green {
+        background-color: #B7FFCB;
+    }
+
+    &.red {
+        background-color: #ffb7b7;
+    }
+}
+
+/***********************************************
+ * listings
+ ***********************************************/
+
+ ul {
+     li {
+         margin-bottom: 0.5em !important;
+     }
+ }
+
+ /***********************************************
+ * reference slide
+ ***********************************************/
+ 
+section.reference {
+    margin-left: 3%;
+    ul {
+        float: left;
+    }
+    h2, p {
+        text-align: left;
+    }
+}
