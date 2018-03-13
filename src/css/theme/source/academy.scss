@@ -223,22 +223,6 @@ h1.shout {
     }
  }
 
- code mark {
-    background-color: #fff2a8;
-
-    &.blue {
-        background-color: #a8d1ff;
-    }
-
-    &.green {
-        background-color: #B7FFCB;
-    }
-
-    &.red {
-        background-color: #ffb7b7;
-    }
-}
-
 /***********************************************
  * listings
  ***********************************************/
@@ -260,5 +244,38 @@ section.reference {
     }
     h2, p {
         text-align: left;
+    }
+}
+
+/***********************************************
+ * post it
+ ***********************************************/
+ 
+ .card {
+    background-color: #fff2a8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 1em !important;
+    display: inline;
+}
+
+/***********************************************
+ * color effects for cards and code
+ ***********************************************/
+
+ code mark, .card {
+    &.yellow {
+        background-color: #fff2a8;
+    }
+
+    &.blue {
+        background-color: #a8d1ff;
+    }
+
+    &.green {
+        background-color: #B7FFCB;
+    }
+
+    &.red {
+        background-color: #ffb7b7;
     }
 }
